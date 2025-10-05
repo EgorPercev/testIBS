@@ -6,13 +6,13 @@ import com.codeborne.selenide.SelenideElement;
 import org.junit.jupiter.api.Test;
 
 public class openPageProductsTests {
-    String baseURL = "http://localhost:8080/food";
-    private final SelenideElement title = $(byXpath("//a[text()='QualIT']"));
+    String baseURL = "https://dzen.ru/?yredirect=true";
+    private final SelenideElement title = $(byXpath("//div[text()='Новости']"));
 
     @Test
     public void openPageProducts() {
             open(baseURL);
-            title.shouldHave(text("QualIT"));
+            title.shouldHave(text("Новости"));
     }
 }
 

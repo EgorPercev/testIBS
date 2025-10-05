@@ -6,13 +6,13 @@ import com.codeborne.selenide.SelenideElement;
 import org.junit.jupiter.api.Test;
 
 public class openPageProductsTests {
-    String baseURL = "https://dzen.ru/?yredirect=true";
-    private final SelenideElement title = $(byXpath("//div[text()='Новости']"));
+    String baseURL = "https://gradle.org/";
+    private final SelenideElement title = $(byXpath("//span[text()='Gradle Build Tool']"));
 
     @Test
     public void openPageProducts() {
             open(baseURL);
-            title.shouldHave(text("Новости"));
+            title.shouldHave(text("Gradle Build Tool"));
     }
 }
 
